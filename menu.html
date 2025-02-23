@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAL TRATTORIA </title>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/restaurantbackground.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            float: left;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+        .content {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img align="left" src="images/logo.webp" class="left-align" width="100" >
+        <h1>𝑷𝑹𝑨𝑳 𝑻𝑹𝑨𝑻𝑻𝑶𝑹𝑰𝑨</h1>
+    </header>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="login.html">LOGIN</a>
+        <a href="menu.html">MENU</a>
+        <a href="mycart.html">MY CART</a>
+        <a href="feedback.html">FEED BACK</a>
+    </nav>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAL TRATTORIA - Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/restaurantbackground.jpg'); 
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        header {
+            background-color: rgba(8, 8, 8, 0.7); /* Transparent background for header */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+        }
+        .menu-container {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the menu */
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        h2 {
+            color: #fff;
+            text-align: center;
+        }
+        .menu-table {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 columns */
+            gap: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .menu-table div {
+            padding: 10px;
+            border: 1px solid #ddd;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            color: #fff;
+            font-size: 16px;
+        }
+        .menu-table div:nth-child(odd) {
+            background-color: #333; /* Darker background for odd items */
+        }
+        .menu-table img {
+            width: 100%;  /* Makes the images fill the cell */
+            height: 200px;
+            object-fit: cover; /* Ensures the image covers the cell area */
+        }
+        .button {
+            background-color: #444;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #ddd;
+            color: #333;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <h2>Menu</h2>
+
+        <!-- Vegetarian Dishes -->
+        <h3>Vegetarian Dishes</h3>
+        <div class="menu-table">
+            <!-- Row 1 -->
+            <script>
+                function addToCart(name, price, image) {
+                    let cart = JSON.parse(localStorage.getItem('cart')) || []; // Get existing cart
+                    cart.push({ name, price, image }); // Add new item
+                    localStorage.setItem('cart', JSON.stringify(cart)); // Save back to storage
+                    alert(name + " added to cart!");
+                }
+            </script>
+            
+            <!-- Example Menu Item (Modify all items like this) -->
+            <div>
+                <img src="images/veg biryani.jpg" alt="veg biryani">
+                <div>VEG BIRYANI</div><div>Rs.200</div>
+                <button class="button" onclick="addToCart('VEG BIRYANI', '200', 'images/veg biryani.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/paneer butter masala.jpg" alt="paneer butter masala">
+                <div>PANEER BUTTER MASALA</div><div>Rs.250</div>
+                <button class="button" onclick="addToCart('paneer butter masala', '250', 'images/paneer butter masala.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/dak makhani.jpg" alt="dal makhani">
+                <div>DAL MAKHANI</div><div>Rs.300</div>
+                <button class="button" onclick="addToCart('dal makhani', '300', 'images/dak makhani.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/vegetable curry.jpg" alt="vegetable curry">
+                <div>VEGETABLE CURRY</div><div>Rs.200</div>
+                <button class="button" onclick="addToCart('vegetable curry', '200', 'images/vegetable curry.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/mixed veg salad.jpg" alt="mixed veg salad">
+                <div>MIXED VEG SALAD</div><div>Rs.100</div>
+                <button class="button" onclick="addToCart('mixed veg salad', '100', 'images/mixed veg salad.jpg')">Add To Cart</button>
+            </div>
+
+            <!-- Row 2 -->
+            <div>
+                <img src="images/chana masala.jpg" alt="chana masala">
+                <div>CHANA MASALA</div><div>Rs.150</div>
+                <button class="button" onclick="addToCart('chana masala', '150', 'images/chana masala.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/vegetable pulao.jpg" alt="vegetable pulao">
+                <div>VEGETABLE PULAO</div><div>Rs.119</div>
+                <button class="button" onclick="addToCart('vegetable pulao', '119', 'images/vegetable pulao.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/aloo gobi.jpg" alt="aloo gobi">
+                <div>ALOO GOBI</div><div>Rs.89</div>
+                <button class="button" onclick="addToCart('aloo gobi', '89', 'images/aloo gobi.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/veg tacos.jpg" alt="veg tacos">
+                <div>VEG TACOS</div><div>Rs.99</div>
+                <button class="button" onclick="addToCart('veg tacos', '99', 'images/veg tacos.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/palak paneer.jpg" alt="palak paneer">
+                <div>PALAK PANEER</div><div>Rs.129</div>
+                <button class="button" onclick="addToCart('palak paneer', '129', 'images/palak paneer.jpg')">Add To Cart</button>
+            </div>
+
+            <!-- Row 3 -->
+            <div>
+                <img src="images/baingan bharta.jpg" alt="baingan bharta">
+                <div>BAINGAN BHARTA</div><div>Rs.199</div>
+                <button class="button" onclick="addToCart('baingan bharta', '199', 'images/baingan bharta.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/vegetable samosa.jpg" alt="Vegetable Samosa">
+                <div>VEGETABLE SAMOSA</div><div>Rs.159</div>
+                <button class="button" onclick="addToCart('vegetable samosa', '159', 'images/vegetable samosa.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/gobi manchurian.jpg" alt="gobi manchurian">
+                <div>GOBI MANCHURIAN</div><div>Rs.229</div>
+                <button class="button" onclick="addToCart('gobi manchurian', '229', 'images/gobi manchurian.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/rajma.jpg" alt="rajma">
+                <div>RAJMA</div><div>Rs.39</div>
+                <button class="button" onclick="addToCart('rajma', '39', 'images/rajma.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/veg pakoras.jpg" alt="veg pakoras">
+                <div>VEG PAKORAS</div><div>Rs.79</div>
+                <button class="button" onclick="addToCart('veg pakoras', '79', 'images/veg pakoras.jpg')">Add To Cart</button>
+            </div>
+
+            <!-- Row 4-->
+            <div>
+                <img src="images/veg kurma.jpg" alt="veg korma">
+                <div>VEG KORMA</div><div>$Rs.89</div>
+                <button class="button" onclick="addToCart('veg korma', '89', 'images/veg kurma.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/veg noodeles.jpg" alt="veg noodles">
+                <div>VEG NOODLES</div><div>Rs.69</div>
+                <button class="button" onclick="addToCart('veg noodeles', '69', 'images/veg noodeles.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/stuffed paratha.jpg" alt="stuffed paratha">
+                <div>STUFFED PARATHA</div><div>Rs.59</div>
+                <button class="button" onclick="addToCart('stuffed paratha', '59', 'images/stuffed paratha.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/vegetable hakka noodels.jpg" alt="vegetable hakka noodles">
+                <div>VEGETABLE HAKKA NOODLES</div><div>Rs.129</div>
+                <button class="button" onclick="addToCart('vegetable hakka noodels', '129', 'images/vegetable hakka noodels.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/spinach salad.jpg" alt="spinach salad">
+                <div>SPINACH SALAD</div><div>Rs.99</div>
+                <button class="button" onclick="addToCart('spinach salad', '99', 'images/spinach salad.jpg')">Add To Cart</button>
+            </div>
+
+            <!-- Row 5-->
+            <div>
+                <img src="images/veg pizza.jpg" alt="veg pizza">
+                <div>VEG PIZZA</div><div>Rs.89</div>
+                <button class="button" onclick="addToCart('veg pizza', '89', 'images/veg pizza.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/paneer tikka.jpg" alt="paneer tikka">
+                <div>PANEER TIKKA</div><div>Rs.99</div>
+                <button class="button" onclick="addToCart('paneer tikka', '99', 'images/paneer tikka.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/vegetable lasanga.jpg" alt="vegetable lasanga">
+                <div>VEGETABLE LASANGA</div><div>Rs.80</div>
+                <button class="button" onclick="addToCart('vegetable lasanga', '80', 'images/vegetable lasanga.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/masala dosa.jpg" alt="masala dosa">
+                <div>MASALA DOSA</div><div>Rs.50</div>
+                <button class="button" onclick="addToCart('masala dosa', '50', 'images/masala dosa.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/aloo parota.jpg" alt="aloo paratha">
+                <div>ALOO PARATHA</div><div>Rs.159</div>
+                <button class="button" onclick="addToCart('aloo parota', '159', 'images/aloo parota.jpg')">Add To Cart</button>
+            </div>
+        </div> <br><br><br><br>
+
+        <!-- Non-Vegetarian Dishes -->
+        <h3>NON-VEG DISHES</h3>
+        <div class="menu-table">
+            <!-- Row 1 -->
+            <div>
+                <img src="images/chicken biryani.jpg" alt="chicken biryani">
+                <div>CHICKEN BIRYANI</div><div>Rs.350</div>
+                <button class="button" onclick="addToCart('chicken biryani', '350', 'images/chicken biryani.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/butter chicken.jpg" alt="butter chicken">
+                <div>BUTTER CHICKEN</div><div>Rs.299</div>
+                <button class="button" onclick="addToCart('butter chicken', '299', 'images/butter chicken.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/chicken curry.jpg" alt="chicken curry">
+                <div>CHICKEN CURRY</div><div>Rs.300</div>
+                <button class="button" onclick="addToCart('chicken curry', '300', 'images/chicken curry.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/mutton korma.jpg" alt="mutton korma">
+                <div>MUTTON KORMA</div><div>Rs.450</div>
+                <button class="button" onclick="addToCart('mutton korma', '450', 'images/mutton korma.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/fish tikka.jpg" alt="fish tikka">
+                <div>FISH TIKKA</div><div>Rs.200</div>
+                <button class="button" onclick="addToCart('fish tikka', '200', 'images/fish tikka.jpg')">Add To Cart</button>
+            </div>
+
+            <!-- Row 2 -->
+            <div>
+                <img src="images/chicken wungs.jpg" alt="chicken wings">
+                <div>CHICKEN WINGS</div><div>Rs.250</div>
+                <button class="button" onclick="addToCart('chicken wings', '250', 'images/chicken wungs.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/fish curry.jpg" alt="fish curry">
+                <div>FISH CURRY</div><div>Rs.399</div>
+                <button class="button" onclick="addToCart('fish curry', '399', 'images/fish curry.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/grilled chicken.jpg" alt="grilled chicken">
+                <div>GRILLED CHICKEN</div><div>Rs.499</div>
+                <button class="button" onclick="addToCart('grilled chicken', '499', 'images/grilled chicken.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/prawn masala.jpg" alt="prawn masala">
+                <div>PRAWN MASALA</div><div>Rs.150</div>
+                <button class="button" onclick="addToCart('prawn masala', '150', 'images/prawn masala.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/chicken seekh kabab.jpg" alt="chicken seekh kabab">
+                <div>CHICKEN SEEKH KABAB</div><div>Rs.99</div>
+                <button class="button" onclick="addToCart('chicken seekh kabab', '99', 'images/chicken seekh kabab.jpg')">Add To Cart</button>
+            </div>
+
+            <!-- Row 3 -->
+            <div>
+                <img src="images/egg curry.jpg" alt="egg curry">
+                <div>EGG CURRY</div><div>Rs.80</div>
+                <button class="button" onclick="addToCart('egg curry', '80', 'images/egg curry.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/chicken sizzler.jpg" alt="chicken sizzeler">
+                <div>CHICKEN SIZZLER</div><div>Rs.129</div>
+                <button class="button" onclick="addToCart('chicken sizzler', '129', 'images/chicken sizzler.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/goat meat curry.jpg" alt="goat meat curry">
+                <div>GOAT MEAT CURRY</div><div>Rs.400</div>
+                <button class="button" onclick="addToCart('goat meat curry', '400', 'images/goat meat curry.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/chicken shawarma.jpg" alt="chicken shawarma">
+                <div>CHICKEN SHAWARMA</div><div>Rs.150</div>
+                <button class="button" onclick="addToCart('chicken shawarma', '150', 'images/chicken shawarma.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/prawn biryani.jpg" alt="prawn biryani">
+                <div>PRAWN BIRYANI</div><div>Rs.299</div>
+                <button class="button" onclick="addToCart('prawn biryani', '299', 'images/prawn biryani.jpg')">Add To Cart</button>
+            </div>
+
+            <!-- Row 4-->
+            <div>
+                <img src="images/chicken tikka.jpg" alt="chicken tikka">
+                <div>CHICKEN TIKKA</div><div>Rs.239</div>
+                <button class="button" onclick="addToCart('chicken tikka', '239', 'images/chicken tikka.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/fish fry.jpg" alt="fish fry">
+                <div>FISH FRY</div><div>Rs.300</div>
+                <button class="button" onclick="addToCart('fish fry', '300', 'images/fish fry.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/chettinad chicken.jpg" alt="chettinad chicken">
+                <div>CHETTINAD CHICKEN</div><div>Rs.250</div>
+                <button class="button" onclick="addToCart('chettinad chicken', '250', 'images/chettinad chicken.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/beef stew.jpg" alt="beef stew">
+                <div>BEEF STEW</div><div>Rs.359</div>
+                <button class="button" onclick="addToCart('beef stew', '359', 'images/beef stew.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/roast chicken.jpg" alt="roast chicken">
+                <div>ROAST CHICKEN</div><div>Rs.199</div>
+                <button class="button" onclick="addToCart('roast chicken', '199', 'images/roast chicken.jpg')">Add To Cart</button>
+            </div>
+
+            <!-- Row 5-->
+            <div>
+                <img src="images/mutton seekh.jpg" alt="mutton seekh kabab">
+                <div>MUTTON SEEKH KABAB</div><div>Rs.299</div>
+                <button class="button" onclick="addToCart('mutton seekh kabab', '299', 'images/mutton seekh.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/grilled fish.jpg" alt="grilled fish">
+                <div>GRILLED FISH</div><div>Rs.129</div>
+                <button class="button" onclick="addToCart('grilled fish', '129', 'images/grilled fish.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/chicken noodles.jpg" alt="chicken noodles">
+                <div>CHICKEN NOODLES</div><div>Rs.159</div>
+                <button class="button" onclick="addToCart('chicken noodles', '159', 'images/chicken noodles.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/prawn salad.jpg" alt="prawn salad">
+                <div>PRAWN SALAD</div><div>Rs.129</div>
+                <button class="button" onclick="addToCart('prawn salad', '129', 'images/prawn salad.jpg')">Add To Cart</button>
+            </div>
+            <div>
+                <img src="images/fried chicken.jpg" alt="fried chicken">
+                <div>FRIED CHICKEN</div><div>Rs.199</div>
+                <button class="button" onclick="addToCart('fried chicken', '199', 'images/fried chicken.jpg')">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+</body>
+</html>
